@@ -32,7 +32,7 @@ public:
 
 int binary_search(int* v,int n,int p);
 
-int find_max(Listy l);
+int find_max(Listy l,int start);
 
 bool check_max(Listy l,int idx);
 
@@ -52,7 +52,7 @@ int main()
 
 
 
-    int x = binary_search(l._v,find_max(l),14);
+    int x = binary_search(l._v,find_max(l,10),14);
     printf("index: %d\n",x);
 
 
@@ -94,11 +94,11 @@ bool check_max(Listy l,int idx){
 
 }
 
-int find_max(Listy l){
+int find_max(Listy l,int start){
 
 	if(l._v != NULL){
 
-		int guess = 10;//the more you now about about what kind of system you are working the better the guess
+		int guess = start;//the more you now about about what kind of system you are working the better the guess
 
 		int low = 0;
 		int mid;
